@@ -1,0 +1,199 @@
+@font-face {
+    font-family: "Satoshi-Light";
+    src: url('../fonts/OTF/Satoshi-Light.otf');
+}
+@font-face {
+    font-family: "Satoshi-Bold";
+    src: url(../fonts/OTF/Satoshi-Bold.otf);
+}
+@font-face {
+    font-family: "Satoshi-Black";
+    src: url(../fonts/OTF/Satoshi-Black.otf);
+}
+*{
+    background-color: white;
+    box-sizing: border-box;
+    margin: 0;    
+}
+body{
+    font-family: "Satoshi-Light", sans-serif;
+    width: auto;
+    padding-top: 60px;
+    margin: 0px;
+}
+header{
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 1000;
+}
+
+/* propiedades de la barra de menu */
+.menu{
+    list-style: none;
+    margin: 5px;
+    display: flex;
+    margin-left: -45px;
+    margin-right: 0px;
+    font-weight:lighter
+}
+.menu li{
+    color: #152E5B;
+    display: inline-block;
+    text-align: center;
+}
+.menu li a{
+    display: inline-block;
+    color: #152E5B;
+    padding: 15px;
+    text-decoration: none;
+}
+.menu li a:hover{
+    color: #d3becb;
+}
+.menu li a:active{
+    color: #d56aa0;
+}
+.menu li.home {
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+/* propiedades div.producto */
+.producto{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.linea1{
+    background-color: #152E5B;
+    border: none;
+    height: 4px; /* Altura de la línea */
+    width: 100%; /* Ancho de la línea */
+}
+.texto{
+    font-family: "Hiragino Kaku Gothic Std";
+    font-size: 50px;
+    line-height: 100px;
+    color: #152E5B;
+    text-align: center;
+}
+.imagen{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.portada{
+    width: 100%;
+    height: 500px;
+    object-fit: cover; /* Escala la imagen sin distorsionar, recortando si es necesario */
+    object-position: center; /* Centra la imagen en caso de recorte */
+}
+.info{
+    height: 100%;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: flex-end; /* Asegura que estén a la misma altura */
+    color: #d56aa0;
+}
+.datos{
+    font-family: "Satoshi-Light";
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    justify-content: flex-start;
+    margin-left: 10%;
+    line-height: 75px;
+}
+.grupo{
+    font-family: "Satoshi-Light";
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    justify-content: flex-end;
+    line-height: 75px;
+    margin-right: 10%;
+}
+.descripcion{
+    font-family: "Satoshi-Light";
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    line-height: 45px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 35px;
+    margin-top: 35px;
+    text-align: justify;
+    color: #152E5B;
+}
+.contraportada{
+    width: 90%;
+    height: 95%;
+    max-width: 100vw;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 45px;
+}
+.contraportada img{
+    width: 90%;
+    max-width: 1150px;
+    height: 95%;
+    object-fit: cover;
+}
+
+/* propiedades carrusel */
+.fotosextra{
+    width: calc(100vw - 20%);    
+    height: 500px;
+    margin-left: 10%;
+}
+.carrusel-contenedor{
+    width: calc(100vw - 20%);
+    max-width: 1150px;
+    height: 500px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.carrusel{
+    width: calc(100vw - 20%);
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 75px;
+}
+.carrusel img{
+    width: calc(100vw - 20%);
+    width: 550px;
+    height: 500px;
+    object-fit: cover;
+    align-items: center;
+}
+button{
+    background-color: transparent;
+    border: none;
+    color: #152E5B;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    font-family: "Satoshi-Bold";
+}
+.prev-btn{
+    left: 10px;
+}
+.next-btn{
+    right: 10px;
+}

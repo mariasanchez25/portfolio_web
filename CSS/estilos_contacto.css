@@ -1,0 +1,108 @@
+@font-face {
+    font-family: "Satoshi-Light";
+    src: url('../fonts/OTF/Satoshi-Light.otf');
+}
+@font-face {
+    font-family: "Satoshi-Bold";
+    src: url(../fonts/OTF/Satoshi-Bold.otf);
+}
+@font-face {
+    font-family: "Satoshi-Black";
+    src: url(../fonts/OTF/Satoshi-Black.otf);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    font-family: "Satoshi-Light", sans-serif;
+    width: auto;
+    padding-top: 60px;
+    margin: 0px;
+    background-color: #152E5B;
+}
+header{
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+}
+
+/* propiedades de la barra de menu */
+.menu{
+    list-style: none;
+    margin: 5px;
+    display: flex;
+    margin-left: -45px;
+    margin-right: 0px;
+    font-weight:lighter
+}
+.menu li{
+    color: #152E5B;
+    display: inline-block;
+    text-align: center;
+}
+.menu li a{
+    display: inline-block;
+    color: #152E5B;
+    padding: 15px;
+    text-decoration: none;
+}
+.menu li a:hover{
+    color: #d3becb;
+}
+.menu li a:active{
+    color: #d56aa0;
+}
+.menu li.home {
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+/* propiedades div.info */
+.info{
+    background-color: #152E5B;
+    width: 100vw;
+    height: auto;
+    text-align: flex-start;
+    margin-top: 125px;
+}
+.titulo{
+    margin-left: 50%;
+    color: white;
+    background-color: #152E5B;
+    font-family: "Hiragino Kaku Gothic Std";
+    font-size: 50px;
+    letter-spacing: -0.1em;
+    margin-bottom: 30px;
+}
+.contacto{
+    margin-left: 50%;
+    color: white;
+    background-color: #152E5B;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.contacto img{
+    width: 50px;
+    height: 50px;
+    background-color: #152E5B;
+}
+.contacto p{
+    font-size: 16px;
+    color: white;
+    background-color: #152E5B;
+}
+.link{
+    font-size: 16px;
+    color: white;
+    background-color: #152E5B;
+    text-decoration: none;
+    cursor: pointer;
+    text-decoration: underline;
+}

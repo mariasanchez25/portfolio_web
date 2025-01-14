@@ -1,0 +1,157 @@
+@font-face {
+    font-family: "Satoshi-Light";
+    src: url('../fonts/OTF/Satoshi-Light.otf');
+}
+@font-face {
+    font-family: "Satoshi-Bold";
+    src: url(../fonts/OTF/Satoshi-Bold.otf);
+}
+@font-face {
+    font-family: "Satoshi-Black";
+    src: url(../fonts/OTF/Satoshi-Black.otf);
+}
+*{
+    background-color: white;
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    font-family: "Satoshi-Light", sans-serif;
+    width: auto;
+    padding-top: 60px;
+    margin: 0px;
+}
+header{
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 1000;
+}
+
+/* propiedades de la barra de menu */
+.menu{
+    list-style: none;
+    margin: 5px;
+    display: flex;
+    margin-left: -45px;
+    margin-right: 0px;
+    font-weight:lighter
+}
+.menu li{
+    color: #152E5B;
+    display: inline-block;
+    text-align: center;
+}
+.menu li a{
+    display: inline-block;
+    color: #152E5B;
+    padding: 15px;
+    text-decoration: none;
+}
+.menu li a:hover{
+    color: #d3becb;
+}
+.menu li a:active{
+    color: #d56aa0;
+}
+.menu li.home {
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+/* propiedades cuadricula producto */
+.producto{
+    width: 100vw;
+    height: 680px;
+    display: flex;
+    flex-direction: row;    
+    margin: 0;
+}
+section{
+    width: 37.3%;
+    height: 60%;
+}
+section img{
+    width: 100%; 
+}
+.texto{
+    height: 320px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.titulo{
+    font-family: "Hiragino Kaku Gothic Std";
+    font-size: 150px;
+    margin-top: -10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.columnas{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Asegura que estén a la misma altura */
+}
+.empresa{
+    font-family: "Satoshi-Light";
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    justify-content: flex-start;
+}
+.fecha{
+    font-family: "Satoshi-Light";
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    justify-content: flex-end;
+}
+article{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 30px;
+    width: auto;
+    height: 300px;
+    align-items: stretch;
+}
+article img{
+    width: 280px;
+}
+
+/* función de ampliar imágenes */
+.imgexp {
+    transform: scale(0.8); /* Escala inicial más pequeña */
+    transition: transform 0.5s ease; /* Transición suave */
+    display: block; /* Asegura que no se vean anomalías visuales */
+    margin: 0 auto; /* Alineación centrada si es necesario */
+}
+
+/* colores de cada producto */
+.knett{
+    background-color: #d3becb;
+    color: #152E5b;
+}
+.kram{
+    background-color: #152E5b;
+    color: #d3becb;
+}
+.velella{
+    background-color: #d3becb;
+    color: #152E5b;
+}
+.val{
+    background-color: #d3becb;
+    color: #152E5b;
+}
+.shyro{
+    background-color: #152E5b;
+    color: #d3becb;
+}

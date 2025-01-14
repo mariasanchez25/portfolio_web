@@ -1,0 +1,162 @@
+@font-face {
+    font-family: "Satoshi-Light";
+    src: url('../fonts/OTF/Satoshi-Light.otf') format('woff2'),
+}
+*{
+    background-color: white;
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    font-family: "Satoshi-Light", sans-serif;
+    width: auto;
+    height: auto;
+    padding-top: 60px;
+}
+header{
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3vh;
+    z-index: 1000;
+}
+
+/*propiedades de la barra de menu*/
+.menu{
+    list-style: none;
+    margin: 5px;
+    display: flex;
+    margin-left: -45px;
+    margin-right: 0px;
+    font-weight:lighter
+}
+.menu li{
+    color: #152E5B;
+    display: inline-block;
+    text-align: center;
+}
+.menu li a{
+    display: inline-block;
+    color: #152E5B;
+    padding: 15px;
+    text-decoration: none;
+}
+.menu li a:hover{
+    color: #d3becb;
+}
+.menu li a:active{
+    color: #d56aa0;
+}
+.menu li.home {
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+/*propiedades de la cuadrícula portfolio*/
+.titulo{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -44%); /* Ajustar el texto al centro exacto */
+    z-index: 10; /* Asegurarse de que esté sobre la cuadrícula */
+    background-color: transparent;
+}
+.titulo p, .titulo h1 {
+    background-color: transparent; /* Fondo transparente para elementos hijos */
+    color: #152E5B;
+}
+h1{
+    font-family: "Hiragino Kaku Gothic Std";
+    font-size: 100px;
+    margin: 0;
+    padding: 0;
+    letter-spacing: -0.2em; /* Espacio entre letras */
+    line-height: 0.9; /* Espacio entre líneas */
+    transform: opacity 0.3 ease;
+}
+.txtsuperior{
+    margin-bottom: 197px;
+    margin-top: 0;
+}
+.txtinferior{
+    margin-bottom: 0;
+    margin-top: 197px;
+}
+
+/*propiedades de la cuadrícula de fotos*/
+.cuadricula{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    width: 100vw;
+    height: 93vh;
+    gap: 0;
+}
+.carta{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    perspective: 100000px; /* Profundidad para el efecto de voltear las cartas*/
+    border: none;
+    object-fit: cover; /* Ajustar la imagen sin distorsionarla */
+}
+.carta img{
+    width: 100%;
+    backface-visibility: hidden; /* Ocultar la imagen cuando no está de frente */
+}
+.frontal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease;
+    justify-content: center;
+    align-items: center;
+}
+.trasera{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: visible;
+    transition: transform 0.6s ease;
+    justify-content: center;
+    align-items: center;
+}
+
+/*color de las cartas*/
+.uno{
+    background-color: #d3becb;
+}
+.dos{
+    background-color: #D8D1CA;
+}
+.tres{
+    background-color: #D5D6DB;
+}
+.cuatro{
+    background-color: #E4E3E4;
+}
+.cinco{
+    background-color: #77849C;
+}
+.seis{
+    background-color: #fae3c6;
+}
+
+/*giro de las cartas*/
+.carta .frontal{
+    transform: rotateY(0);
+    z-index: 2;
+}
+.carta .trasera{
+    transform: rotateY(180deg);
+}
+.carta:hover .frontal{
+    transform: rotateY(-180deg);
+}
+.carta:hover .trasera{
+    transform: rotateY(0);
+}
